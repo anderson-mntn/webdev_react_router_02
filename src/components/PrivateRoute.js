@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Movies } from "../pages/Movies";
-import { SignUp } from "../pages/SignUp";
+import { SignIn } from "../pages/SignIn";
 
 
 export default function PrivateRoute({children, ...rest}){
@@ -9,6 +9,6 @@ export default function PrivateRoute({children, ...rest}){
     const login = useSelector(state=>state)
   
     return(
-        login ? <Movies/> : <SignUp/>
+        login ? <Movies/> : <SignIn/>
     )
 }

@@ -5,7 +5,7 @@ import { Book } from './pages/Book'
 import { Movies } from './pages/Movies';
 import { BookList } from './pages/BookList';
 import { Contact } from './pages/Contact';
-import { SignUp } from './pages/SignUp';
+import { SignUp } from './pages/SignIn';
 import AuthButton from './AuthButton';
 
 import PrivateRoute from './components/PrivateRoute'
@@ -33,7 +33,7 @@ function App() {
       <Route element={<PrivateRoute/>}>
         <Route  path="/movies" element={<Movies/>}/>
       </Route>
-      
+
       <Route  path="/contact" element={<Contact />}/>
       <Route  path="/signup" element={<SignUp />}/>
       

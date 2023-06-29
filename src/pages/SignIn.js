@@ -1,10 +1,10 @@
 
 
-export function SignUp(){
+export function SignIn(){
     return (
     <>
-    <h2>Sing Up Here</h2>
-    <form className="singup-form">
+    <h2>Sign in Here</h2>
+    <form className="singin-form">
 
     <label>e-mail </label>
     <input></input>
