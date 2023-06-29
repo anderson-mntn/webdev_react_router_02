@@ -1,8 +1,23 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { useSelector } from "react-redux";
+import {  Route, Navigate } from "react-router-dom";
+
 
 export default function PrivateRoute({children, ...rest}){
-    <Route {...rest} >
-
-    </Route>
+    
+    const login = useSelector(state=>state)
+  
+    return(
+        <Route {...rest} 
+            render = {({location}) => 
+                login ? (children) :
+                <Navigate to = {{
+                    path: "/home",
+                    state: {from: location},
+                }}></Navigate>
+            }
+        />
+           
+            
+    )
 }

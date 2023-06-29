@@ -5,5 +5,18 @@
 }
 
 .movies-ul{
+  display: flex;
+  flex-direction: column;
   list-style:decimal;
+  gap: 1rem 0;
+}
+
+.App{
+  background-color: grey;
+}
+
+.singup-form{
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
 }
