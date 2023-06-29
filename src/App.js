@@ -5,14 +5,16 @@ import { Book } from './pages/Book'
 import { Movies } from './pages/Movies';
 import AuthButton from './AuthButton';
 
-import { Provider } from 'react-redux';
-import store from './store.js';
 import { BookList } from './pages/BookList';
+import { Contact } from './pages/Contact';
+
+import PrivateRoute from './components/PrivateRoute'
+import { SignUp } from './pages/SignUp';
 
 
 function App() {
   return (
-    <Provider store={store}>
+   
   <>
   <nav>
     <AuthButton/>
@@ -24,14 +26,16 @@ function App() {
     </ul>
   </nav>
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/books" element={<BookList />}/>
-      <Route path="/books/:id" element={<Book />}/>
-      <Route path="/movies" element={<Movies />}/>
+      <Route  path="/" element={<Home />} />
+      <Route  path="/books" element={<BookList />}/>
+      <Route  path="/books/:id" element={<Book />}/>
+      <Route  path="/movies" element={<PrivateRoute></PrivateRoute>}/>
+      <Route  path="/contact" element={<Contact />}/>
+      <Route  path="/signup" element={<SignUp />}/>
+      
 
     </Routes>
   </>
-  </Provider>
   )
 }
 
