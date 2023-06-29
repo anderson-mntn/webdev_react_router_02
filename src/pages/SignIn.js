@@ -12,6 +12,8 @@ export function SignIn(){
     <label>password</label>
     <input ></input>
     </form>
+
+    <small>Don't you have an account? <a href="">register here</a></small>
     </>
     )
 }

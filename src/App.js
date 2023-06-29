@@ -5,7 +5,7 @@ import { Book } from './pages/Book'
 import { Movies } from './pages/Movies';
 import { BookList } from './pages/BookList';
 import { Contact } from './pages/Contact';
-import { SignUp } from './pages/SignIn';
+import { SignIn } from './pages/SignIn';
 import AuthButton from './AuthButton';
 
 import PrivateRoute from './components/PrivateRoute'
@@ -17,14 +17,17 @@ function App() {
    
   <>
   <nav>
-    <AuthButton/>
     <ul className='header-ul'>
+      <AuthButton/>
       <li><Link to='/'>Home</Link></li>
       <li><Link to='/books'>Books</Link></li>
       <li><Link to='/movies'>Movies</Link></li>
       <li><Link to='/contact'>Contact</Link></li>
     </ul>
+   
   </nav>
+  <div className='routes-content'>
+
     <Routes>
       <Route  path="/" element={<Home />} />
       <Route  path="/books" element={<BookList />}/>
@@ -35,10 +38,11 @@ function App() {
       </Route>
 
       <Route  path="/contact" element={<Contact />}/>
-      <Route  path="/signup" element={<SignUp />}/>
+      <Route  path="/signup" element={<SignIn />}/>
       
 
     </Routes>
+  </div>
   </>
   )
 }
